@@ -1,0 +1,54 @@
+.missions-table{
+    width: 80%;
+    display: flex;
+    justify-items: end;
+    padding-left: 20%;
+
+}
+.Missions{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.mission-header{
+    display: grid;
+    grid-template-columns: 4fr 3fr 1.5fr 1.5fr;
+    gap: 1.2em;
+    margin-top: 0.5em;    
+}
+.mission{
+    display: grid;
+    grid-template-columns: 4fr 3fr 1.5fr 1.5fr;
+    gap: 1.2em;
+    /* justify-items: start; */
+/*     align-items: stretch;   */  
+  /*   align-content: start; */
+    margin-top: 0.5em;    
+}
+
+.mission-header-cell{
+    width: 100%;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    padding-left: 1em;
+    border-radius: 1em;
+    margin: 0.2em;
+}
+
+.cell{
+    background-color: var(--starlight);
+    width: 100%;
+    padding-top: 1.3em;
+    padding-bottom: 1.3em;
+    padding-left: 1em;
+    border-radius: 1em;
+    margin: 0.1em;
+}
+.cell:hover{
+    background-color: var(--martian-soil);
+    color: var(--white-dwarf);
+}
+.center{
+    text-align: center;
+}

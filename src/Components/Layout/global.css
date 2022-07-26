@@ -1,0 +1,39 @@
+:root {
+    box-sizing: border-box;
+    --martian-soil: #d14b39;
+    --void: #193247;
+    --distant-star: #f4ddb5;
+    --white-dwarf: #fff;
+    --starlight: #fdf2dd;
+    --moon-dust: #606060;
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+  body{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--distant-star);
+    font-family: sans-serif;
+    color:var(--void)
+  }
+
+  .btn-primary{
+    background-color: var(--martian-soil);
+    color: var(--white-dwarf);
+    padding: 0.5em 2em 0.5em 1em;
+    border-radius: 2em;
+    border-color: transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
