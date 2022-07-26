@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/react-coding-exercises/static/css/main.c3b0802e.chunk.css",
-    "main.js": "/react-coding-exercises/static/js/main.17b8fcd3.chunk.js",
-    "main.js.map": "/react-coding-exercises/static/js/main.17b8fcd3.chunk.js.map",
-    "runtime-main.js": "/react-coding-exercises/static/js/runtime-main.250ccd6a.js",
-    "runtime-main.js.map": "/react-coding-exercises/static/js/runtime-main.250ccd6a.js.map",
-    "static/js/2.2449f6f0.chunk.js": "/react-coding-exercises/static/js/2.2449f6f0.chunk.js",
-    "static/js/2.2449f6f0.chunk.js.map": "/react-coding-exercises/static/js/2.2449f6f0.chunk.js.map",
-    "static/js/3.ff238dd6.chunk.js": "/react-coding-exercises/static/js/3.ff238dd6.chunk.js",
-    "static/js/3.ff238dd6.chunk.js.map": "/react-coding-exercises/static/js/3.ff238dd6.chunk.js.map",
-    "index.html": "/react-coding-exercises/index.html",
-    "static/css/main.c3b0802e.chunk.css.map": "/react-coding-exercises/static/css/main.c3b0802e.chunk.css.map",
-    "static/js/2.2449f6f0.chunk.js.LICENSE.txt": "/react-coding-exercises/static/js/2.2449f6f0.chunk.js.LICENSE.txt"
+    "main.css": "/react-coding-exercise/static/css/main.c3b0802e.chunk.css",
+    "main.js": "/react-coding-exercise/static/js/main.17b8fcd3.chunk.js",
+    "main.js.map": "/react-coding-exercise/static/js/main.17b8fcd3.chunk.js.map",
+    "runtime-main.js": "/react-coding-exercise/static/js/runtime-main.e28fcf5a.js",
+    "runtime-main.js.map": "/react-coding-exercise/static/js/runtime-main.e28fcf5a.js.map",
+    "static/js/2.2449f6f0.chunk.js": "/react-coding-exercise/static/js/2.2449f6f0.chunk.js",
+    "static/js/2.2449f6f0.chunk.js.map": "/react-coding-exercise/static/js/2.2449f6f0.chunk.js.map",
+    "static/js/3.ff238dd6.chunk.js": "/react-coding-exercise/static/js/3.ff238dd6.chunk.js",
+    "static/js/3.ff238dd6.chunk.js.map": "/react-coding-exercise/static/js/3.ff238dd6.chunk.js.map",
+    "index.html": "/react-coding-exercise/index.html",
+    "static/css/main.c3b0802e.chunk.css.map": "/react-coding-exercise/static/css/main.c3b0802e.chunk.css.map",
+    "static/js/2.2449f6f0.chunk.js.LICENSE.txt": "/react-coding-exercise/static/js/2.2449f6f0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.250ccd6a.js",
+    "static/js/runtime-main.e28fcf5a.js",
     "static/js/2.2449f6f0.chunk.js",
     "static/css/main.c3b0802e.chunk.css",
     "static/js/main.17b8fcd3.chunk.js"
