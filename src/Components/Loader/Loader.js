@@ -1,19 +1,20 @@
 import React from 'react';
+import "./Loader.css"
 // style
 
 
 const Loader = () => (
-    <div className="loader__container d-flex justify-content-center align-items-center">
+    <div className="loading">
         <p>
-            <span role="img" aria-label="rocket" className="mr-4">
+            <span role="img" aria-label="rocket" className="mission">
                 🚀
             </span>
             Loading data through wormholes...
         </p>
         <div className="loader__dots--animation">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span>.</span>
+            <span>.</span>
+            <span>.</span>
         </div>
     </div>
 );

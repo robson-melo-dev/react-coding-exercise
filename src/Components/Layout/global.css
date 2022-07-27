@@ -27,7 +27,7 @@ body {
     background-color: var(--distant-star);
     font-family: sans-serif;
     color:var(--void);
-    background-image: url('../../images/bg_rocket_transparent.png');
+    background-image: url('../../assets/vector/takeoff.svg');
     background-repeat: no-repeat;
     background-size: 100%;
   }
@@ -46,24 +46,40 @@ body {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   }
-
+.header-wrapper{
+  display: flex;
+    width: 100%;
+    justify-content: end;
+    padding-right: 2vw;
+}
   .header{
-    width: 90%;
+    width: 77%;
+    /* width: 100%;
     height: 8em;
     gap: 0.5em;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-right: 20%;
+    padding-right: 20vw; */
+    height: 8em;
+    display: grid;
+    grid-template-columns: 3.5fr 4fr 1.5fr 1fr;
+    gap: 1.2em;
+    margin-top: 0.5em;    
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: small;
   }
 
   .search_input{
     height: 2em;
-    width: 32em;
     border-color: transparent;
     border-radius: 2em;
     background-color: var(--void);
     color: var(--starlight);
     padding-left: 1em;
   }
+ /*  .logo{
+    width: 35%;
+  } */
