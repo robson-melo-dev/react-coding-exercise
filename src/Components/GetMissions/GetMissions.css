@@ -1,30 +1,30 @@
 .missions-table{
-    width: 100%;
     display: flex;
-    justify-items: end;
-    padding-left: 10%;
+    width: 100%;
+    justify-content: end;
+    padding-right: 2vw;
 
 }
 .missions{
     display: flex;
+    width: 77%;
     flex-direction: column;
 
 }
 
 .mission-header{
     display: grid;
-    grid-template-columns: 4fr 3fr 1.5fr 1.5fr;
+    grid-template-columns:  3.5fr 2.5fr 1.5fr 1.5fr 1fr;
     gap: 1.2em;
-    margin-top: 0.5em;    
+    margin-top: 0.5em;   
 }
 .mission{
     display: grid;
-    grid-template-columns: 4fr 3fr 1.5fr 1.5fr;
+    grid-template-columns: 3.5fr 2.5fr 1.5fr 1.5fr 1fr;
     gap: 1.2em;
-    /* justify-items: start; */
-/*     align-items: stretch;   */  
-  /*   align-content: start; */
     margin-top: 0.5em;    
+    align-items: center;
+    font-size: small;
 }
 
 .mission-header-cell{
@@ -39,8 +39,8 @@
 .cell{
     background-color: var(--starlight);
     width: 100%;
-    padding-top: 1.3em;
-    padding-bottom: 1.3em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     padding-left: 1em;
     border-radius: 1em;
     margin: 0.1em;
@@ -54,7 +54,9 @@
     align-items: center;
     gap: 10px;
     flex-direction: row;
-    height: 50px;
+    height: 1em;
+    padding-left: 1em;
+    margin-top: 1em;
 }
 .page{
     font-weight: bold;
@@ -62,5 +64,22 @@
 .mission:hover  .cell{
     background-color: var(--martian-soil);
     color: var(--white-dwarf);
-    transition-delay: 0.2s;
+}
+.mission:hover .next-icon{
+    display: grid;
+}
+
+.thin_ruler{
+    width: 90%;
+    display: grid;
+    grid-template-columns:  3.5fr 2.5fr 1.5fr 1.5fr 1fr;
+    background-color: var(--void);
+    height: 0.1em;
+    align-content: center;
+
+}
+.fat_ruler{
+    height: 0.5em;
+    background-color: var(--void);
+    border-radius: 1em;
 }

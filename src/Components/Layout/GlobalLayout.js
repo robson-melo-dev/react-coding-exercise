@@ -4,7 +4,7 @@ class GlobalLayout extends React.Component {
   render(){
     return (
       <>
-        <header><button className="btn-primary">You Need More Mars</button> </header>
+        <header className="header"><input type='text' className="search_input" placeholder={"search by mission name..."}/><button className="btn-primary">Search</button> </header>
         <main>{this.props.children}</main>
       </>
     )

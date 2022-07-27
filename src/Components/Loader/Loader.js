@@ -8,7 +8,7 @@ const Loader = () => (
             <span role="img" aria-label="rocket" className="mr-4">
                 🚀
             </span>
-            It's Loading
+            Loading data through wormholes...
         </p>
         <div className="loader__dots--animation">
             <span></span>

@@ -4,11 +4,13 @@ import Error from "../Error/Error";
 import Loader from "../Loader/Loader";
 import "./GetMissions.css";
 import Arrow from './Arrow.js'
+import NextIcon from "./NextIcon";
 
 function GetMissions() {
   let limit= 0
   const [page, setPage] = useState(6)
   const [sort, setSort] = useState(' ')
+  const [direction, setDirection] = useState('asc')
    //query to get all the mission information for the missions list display
    const GET_MISSIONS = gql`
    {
@@ -39,6 +41,7 @@ function GetMissions() {
   function sortResult(e){
     e.preventDefault()
     setSort(', sort: "mission_name"')
+    setDirection('desc')
     if(page<limit){
       setPage(6)
     }else{setPage(limit)}   
@@ -57,10 +60,13 @@ function GetMissions() {
     <div className="missions-table">
       <div className="missions">
         <div className="mission-header">
-          <h4 className="mission-header-cell">MISSION NAME <span onClick={sortResult}><Arrow/></span></h4>
+          <h4 className="mission-header-cell">MISSION NAME <span onClick={sortResult}><Arrow direction={direction}/></span></h4>
           <h4 className="mission-header-cell">ROCKET NAME</h4>
           <h4 className="mission-header-cell center">ROCKET TYPE</h4>
           <h4 className="mission-header-cell center">LAUNCH YEAR</h4>
+        </div>
+        <div className="thin_ruler">
+          <div className="fat_ruler"></div>
         </div>
 
         {
@@ -73,6 +79,7 @@ function GetMissions() {
                 <div className="cell">{mission.rocket.rocket_name}</div>
                 <div className="cell center">{mission.rocket.rocket_type}</div>
                 <div className="cell center">{mission.launch_year}</div>
+                <div className=" center"><NextIcon/></div>
               </div>
             );
           }

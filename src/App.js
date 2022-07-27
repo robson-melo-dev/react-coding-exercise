@@ -1,4 +1,4 @@
-import './App.css';
+
 import { ApolloProvider, InMemoryCache, ApolloClient, useQuery, gql} from '@apollo/client';
 import GetMissions from './Components/GetMissions/GetMissions';
 

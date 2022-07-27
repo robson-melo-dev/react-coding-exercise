@@ -1,3 +1,13 @@
 .arrow{
-    height:12px
+    height:1em;
+}
+
+.next-icon{
+    height:2em;
+    justify-self: center;
+    display: none;
+    color: var(--martian-soil);
+    border: 2px solid;
+    border-color: var(--martian-soil);
+    border-radius: 50%;
 }
