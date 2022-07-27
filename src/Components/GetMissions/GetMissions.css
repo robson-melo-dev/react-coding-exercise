@@ -1,11 +1,11 @@
 .missions-table{
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-items: end;
-    padding-left: 20%;
+    padding-left: 10%;
 
 }
-.Missions{
+.missions{
     display: flex;
     flex-direction: column;
 
@@ -45,14 +45,22 @@
     border-radius: 1em;
     margin: 0.1em;
 }
-.cell:hover{
-    background-color: var(--martian-soil);
-    color: var(--white-dwarf);
-}
 .center{
     text-align: center;
 }
 
-.arrow{
-    height: 12px;
+.load-more{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+    height: 50px;
+}
+.page{
+    font-weight: bold;
+}
+.mission:hover  .cell{
+    background-color: var(--martian-soil);
+    color: var(--white-dwarf);
+    transition-delay: 0.2s;
 }

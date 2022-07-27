@@ -29,11 +29,16 @@ body {
   }
 
   .btn-primary{
+    display: block;
     background-color: var(--martian-soil);
     color: var(--white-dwarf);
-    padding: 0.5em 2em 0.5em 1em;
+    text-align: center;
     border-radius: 2em;
     border-color: transparent;
     text-transform: uppercase;
     font-weight: bold;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }

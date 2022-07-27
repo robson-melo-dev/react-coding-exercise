@@ -6,41 +6,56 @@ import "./GetMissions.css";
 import Arrow from './Arrow.js'
 
 function GetMissions() {
-
-  const [limit, setLimit] = useState(6)
+  let limit= 0
+  const [page, setPage] = useState(6)
   const [sort, setSort] = useState(' ')
    //query to get all the mission information for the missions list display
    const GET_MISSIONS = gql`
    {
-     launchesPast(limit: ${limit} ${sort}) {
+     launchesPast(limit: 0 ${sort}) {
        mission_name
        rocket {
          rocket_name
          rocket_type
        }
        launch_year
+       id
      }
    }
    `;
   const { data, loading, error } = useQuery(GET_MISSIONS);
   if (loading) return <Loader />;
   if (error) return <Error error={error} />;
+  limit=data.launchesPast.length
 
   function loadMore(e){
     e.preventDefault();
-    setLimit(limit+6)
+    if((page+6)<limit){
+      setPage(page+6)
+    }else{setPage(limit)}
+    
   }
 
   function sortResult(e){
-    e.preventDefault();
+    e.preventDefault()
     setSort(', sort: "mission_name"')
-
+    if(page<limit){
+      setPage(6)
+    }else{setPage(limit)}   
   }
-  console.log(data.launchesPast)
+
+  function toggleHover(e){
+    if(e.target.className=="mission"){
+      e.target.className = "mission row_hover"
+    }else{
+      e.target.className = "mission"
+    }
+  }
+
 
   return (
     <div className="missions-table">
-      <div className="Missions">
+      <div className="missions">
         <div className="mission-header">
           <h4 className="mission-header-cell">MISSION NAME <span onClick={sortResult}><Arrow/></span></h4>
           <h4 className="mission-header-cell">ROCKET NAME</h4>
@@ -48,18 +63,23 @@ function GetMissions() {
           <h4 className="mission-header-cell center">LAUNCH YEAR</h4>
         </div>
 
-        {data.launchesPast.map((mission) => {
-          return (
-            <div className="mission">
-              <div className="cell">{mission.mission_name}</div>
-              <div className="cell">{mission.rocket.rocket_name}</div>
-              <div className="cell center">{mission.rocket.rocket_type}</div>
-              <div className="cell center">{mission.launch_year}</div>
-            </div>
-          );
-        })}
+        {
+        data.launchesPast.map((mission, index) => {
+          if(index<page){
+            console.log(mission.id)
+            return (
+              <div className={'mission'} key={mission.id}>
+                <div className="cell">{mission.mission_name}</div>
+                <div className="cell">{mission.rocket.rocket_name}</div>
+                <div className="cell center">{mission.rocket.rocket_type}</div>
+                <div className="cell center">{mission.launch_year}</div>
+              </div>
+            );
+          }
+          }
+          )}
         <div className="load-more">
-          <p>{limit} of {data.launchesPast.length}</p>
+          <p className="page">{page} of {limit}</p>
         <button className="btn-primary" onClick={loadMore}>Load More</button>
         </div>
       </div>
