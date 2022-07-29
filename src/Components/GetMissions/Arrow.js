@@ -8,12 +8,12 @@ function Arrow(props) {
   if(props.direction == "asc"){
     return(
       <span className='arrow'>
-      <img src={arrow} className="arrow-up"/>
+      <img src={arrow} className="arrow-down"/>
       </span>
     )
     }else{return(
       <span className='arrow'>
-      <img src={arrow} className="arrow-down"/> 
+      <img src={arrow} className="arrow-up"/> 
       </span>
     )
     
