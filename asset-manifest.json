@@ -1,24 +1,26 @@
 {
   "files": {
-    "main.css": "/react-coding-exercise/static/css/main.a7ef67cd.chunk.css",
-    "main.js": "/react-coding-exercise/static/js/main.a8165b06.chunk.js",
-    "main.js.map": "/react-coding-exercise/static/js/main.a8165b06.chunk.js.map",
+    "main.css": "/react-coding-exercise/static/css/main.5fa6d5e6.chunk.css",
+    "main.js": "/react-coding-exercise/static/js/main.f77bebca.chunk.js",
+    "main.js.map": "/react-coding-exercise/static/js/main.f77bebca.chunk.js.map",
     "runtime-main.js": "/react-coding-exercise/static/js/runtime-main.e28fcf5a.js",
     "runtime-main.js.map": "/react-coding-exercise/static/js/runtime-main.e28fcf5a.js.map",
-    "static/js/2.65d88077.chunk.js": "/react-coding-exercise/static/js/2.65d88077.chunk.js",
-    "static/js/2.65d88077.chunk.js.map": "/react-coding-exercise/static/js/2.65d88077.chunk.js.map",
+    "static/js/2.998e07ee.chunk.js": "/react-coding-exercise/static/js/2.998e07ee.chunk.js",
+    "static/js/2.998e07ee.chunk.js.map": "/react-coding-exercise/static/js/2.998e07ee.chunk.js.map",
     "static/js/3.ff238dd6.chunk.js": "/react-coding-exercise/static/js/3.ff238dd6.chunk.js",
     "static/js/3.ff238dd6.chunk.js.map": "/react-coding-exercise/static/js/3.ff238dd6.chunk.js.map",
     "index.html": "/react-coding-exercise/index.html",
-    "static/css/main.a7ef67cd.chunk.css.map": "/react-coding-exercise/static/css/main.a7ef67cd.chunk.css.map",
-    "static/js/2.65d88077.chunk.js.LICENSE.txt": "/react-coding-exercise/static/js/2.65d88077.chunk.js.LICENSE.txt",
+    "static/css/main.5fa6d5e6.chunk.css.map": "/react-coding-exercise/static/css/main.5fa6d5e6.chunk.css.map",
+    "static/js/2.998e07ee.chunk.js.LICENSE.txt": "/react-coding-exercise/static/js/2.998e07ee.chunk.js.LICENSE.txt",
+    "static/media/arrow.62c3f60a.svg": "/react-coding-exercise/static/media/arrow.62c3f60a.svg",
+    "static/media/chevronCircle.aef49271.svg": "/react-coding-exercise/static/media/chevronCircle.aef49271.svg",
     "static/media/global.css": "/react-coding-exercise/static/media/takeoff.31a44e1b.svg",
     "static/media/wordmark.b1d2bb90.svg": "/react-coding-exercise/static/media/wordmark.b1d2bb90.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e28fcf5a.js",
-    "static/js/2.65d88077.chunk.js",
-    "static/css/main.a7ef67cd.chunk.css",
-    "static/js/main.a8165b06.chunk.js"
+    "static/js/2.998e07ee.chunk.js",
+    "static/css/main.5fa6d5e6.chunk.css",
+    "static/js/main.f77bebca.chunk.js"
   ]
 }
