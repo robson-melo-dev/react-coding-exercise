@@ -8,7 +8,7 @@ class GlobalLayout extends React.Component {
       <div className="header-wrapper">
         <header className="header">
           <img src={logo} alt="" className="logo"/>
-          <input type='text' className="search_input" placeholder={"search by mission name..."}/>
+          <input type='text' className="search_input" defaultValue={'Search for flights'}/>
           <button className="btn-primary btn_search">Search</button> 
           </header>
           </div>

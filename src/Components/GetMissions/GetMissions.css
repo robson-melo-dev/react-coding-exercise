@@ -1,28 +1,27 @@
 .missions-table{
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: end;
     padding-right: 2vw;
 
 }
 .missions{
     display: flex;
-    width: 77%;
+    width: 76.5%;
     flex-direction: column;
-    font-size: small;
-    font-weight: 600;
+    font-weight: 500;
 
 }
 
 .mission-header{
     display: grid;
-    grid-template-columns:  3.5fr 2.5fr 1.5fr 1.5fr 1fr;
+    grid-template-columns:  3.6fr 2.6fr 1.5fr 1.3fr 0.525fr;
     gap: 1.2em;
-    margin-top: 0.5em;   
+    margin-top: 0.9em;   
 }
 .mission{
     display: grid;
-    grid-template-columns: 3.5fr 2.5fr 1.5fr 1.5fr 1fr;
+    grid-template-columns: 3.6fr 2.6fr 1.5fr 1.3fr 0.525fr;
     gap: 1.2em;
     margin-top: 0.5em;    
     align-items: center;
@@ -46,6 +45,8 @@
     padding-left: 1em;
     border-radius: 1em;
     margin: 0.1em;
+    align-self: stretch;
+    justify-items: stretch;
 }
 .center{
     text-align: center;
@@ -67,14 +68,12 @@
     background-color: var(--martian-soil);
     color: var(--white-dwarf);
 }
-.mission:hover .next-icon{
-    display: grid;
-}
+
 
 .thin_ruler{
-    width: 90%;
+    width: 95%;
     display: grid;
-    grid-template-columns:  3.5fr 2.5fr 1.5fr 1.5fr 1fr;
+    grid-template-columns:  3.5fr 2.5fr 1.5fr 1.5fr 0.525fr;
     background-color: var(--void);
     height: 0.1em;
     align-content: center;
@@ -85,3 +84,14 @@
     background-color: var(--void);
     border-radius: 1em;
 }
+
+
+.next-icon{
+    height:2em;
+    justify-self: center;
+    display: none;
+}
+.mission:hover .next-icon{
+    display: grid;
+}
+

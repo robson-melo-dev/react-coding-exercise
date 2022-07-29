@@ -1,13 +1,16 @@
 .arrow{
     height:1em;
+    padding-left: 1em;
 }
 
-.next-icon{
-    height:2em;
-    justify-self: center;
-    display: none;
-    color: var(--martian-soil);
-    border: 2px solid;
-    border-color: var(--martian-soil);
-    border-radius: 50%;
+.arrow-up{
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.arrow-down{
+    cursor: pointer;
+    transform: rotate(180deg);
+    transform-origin: center;
+    transition: 0.5s;
 }

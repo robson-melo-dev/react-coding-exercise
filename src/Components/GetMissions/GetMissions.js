@@ -4,12 +4,14 @@ import Error from "../Error/Error";
 import Loader from "../Loader/Loader";
 import "./GetMissions.css";
 import Arrow from './Arrow.js'
-import NextIcon from "./NextIcon";
+import next_icon from "../../assets/vector/chevronCircle.svg";
+
 
 function GetMissions() {
   let limit= 0
   const [page, setPage] = useState(6)
   const [sort, setSort] = useState(' ')
+  const [field, setField] = useState('')
   const [direction, setDirection] = useState('asc')
    //query to get all the mission information for the missions list display
    const GET_MISSIONS = gql`
@@ -40,8 +42,18 @@ function GetMissions() {
 
   function sortResult(e){
     e.preventDefault()
-    setSort(', sort: "mission_name"')
-    setDirection('desc')
+
+    
+    if(field === 'name'){
+      if(direction === 'desc'){
+        setDirection('asc')
+        setSort(', order: "desc", sort: "mission_name"')
+      }else{
+        setDirection('desc')
+        setSort(', order: "asc", sort: "mission_name"')
+      }
+    }else{setField('name')}
+    
     if(page<limit){
       setPage(6)
     }else{setPage(limit)}   
@@ -79,7 +91,7 @@ function GetMissions() {
                 <div className="cell">{mission.rocket.rocket_name}</div>
                 <div className="cell center">{mission.rocket.rocket_type}</div>
                 <div className="cell center">{mission.launch_year}</div>
-                <div className=" center"><NextIcon/></div>
+                <div className=" center"><img src={next_icon} alt="" className="next-icon"/></div>
               </div>
             );
           }
