@@ -1,15 +1,17 @@
 .arrow{
+    display: none;
     height:1em;
     padding-left: 1em;
 }
+.visible{
+    display: inline-block;
+}
 
 .arrow-up{
-    cursor: pointer;
     transition: 0.5s;
 }
 
 .arrow-down{
-    cursor: pointer;
     transform: rotate(180deg);
     transform-origin: center;
     transition: 0.5s;
