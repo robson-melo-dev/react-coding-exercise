@@ -1,26 +1,28 @@
 {
   "files": {
-    "main.css": "/react-coding-exercise/static/css/main.bc1084b9.chunk.css",
-    "main.js": "/react-coding-exercise/static/js/main.31c75a27.chunk.js",
-    "main.js.map": "/react-coding-exercise/static/js/main.31c75a27.chunk.js.map",
-    "runtime-main.js": "/react-coding-exercise/static/js/runtime-main.e290b551.js",
-    "runtime-main.js.map": "/react-coding-exercise/static/js/runtime-main.e290b551.js.map",
-    "static/js/2.b6263cff.chunk.js": "/react-coding-exercise/static/js/2.b6263cff.chunk.js",
-    "static/js/2.b6263cff.chunk.js.map": "/react-coding-exercise/static/js/2.b6263cff.chunk.js.map",
-    "static/js/3.2f17bfc8.chunk.js": "/react-coding-exercise/static/js/3.2f17bfc8.chunk.js",
-    "static/js/3.2f17bfc8.chunk.js.map": "/react-coding-exercise/static/js/3.2f17bfc8.chunk.js.map",
+    "main.css": "/react-coding-exercise/static/css/main.db5d09f9.chunk.css",
+    "main.js": "/react-coding-exercise/static/js/main.1af196a8.chunk.js",
+    "main.js.map": "/react-coding-exercise/static/js/main.1af196a8.chunk.js.map",
+    "runtime-main.js": "/react-coding-exercise/static/js/runtime-main.f1fba834.js",
+    "runtime-main.js.map": "/react-coding-exercise/static/js/runtime-main.f1fba834.js.map",
+    "static/js/2.398e21b6.chunk.js": "/react-coding-exercise/static/js/2.398e21b6.chunk.js",
+    "static/js/2.398e21b6.chunk.js.map": "/react-coding-exercise/static/js/2.398e21b6.chunk.js.map",
+    "static/js/3.08583f29.chunk.js": "/react-coding-exercise/static/js/3.08583f29.chunk.js",
+    "static/js/3.08583f29.chunk.js.map": "/react-coding-exercise/static/js/3.08583f29.chunk.js.map",
     "index.html": "/react-coding-exercise/index.html",
-    "static/css/main.bc1084b9.chunk.css.map": "/react-coding-exercise/static/css/main.bc1084b9.chunk.css.map",
-    "static/js/2.b6263cff.chunk.js.LICENSE.txt": "/react-coding-exercise/static/js/2.b6263cff.chunk.js.LICENSE.txt",
+    "static/css/main.db5d09f9.chunk.css.map": "/react-coding-exercise/static/css/main.db5d09f9.chunk.css.map",
+    "static/js/2.398e21b6.chunk.js.LICENSE.txt": "/react-coding-exercise/static/js/2.398e21b6.chunk.js.LICENSE.txt",
     "static/media/arrow.62c3f60a.svg": "/react-coding-exercise/static/media/arrow.62c3f60a.svg",
     "static/media/chevronCircle.aef49271.svg": "/react-coding-exercise/static/media/chevronCircle.aef49271.svg",
+    "static/media/chevronCircle2.b92c0fbb.svg": "/react-coding-exercise/static/media/chevronCircle2.b92c0fbb.svg",
     "static/media/global.css": "/react-coding-exercise/static/media/takeoff.31a44e1b.svg",
+    "static/media/GetTicket.css": "/react-coding-exercise/static/media/ticketPageBackground.33ea2af8.svg",
     "static/media/wordmark.b1d2bb90.svg": "/react-coding-exercise/static/media/wordmark.b1d2bb90.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e290b551.js",
-    "static/js/2.b6263cff.chunk.js",
-    "static/css/main.bc1084b9.chunk.css",
-    "static/js/main.31c75a27.chunk.js"
+    "static/js/runtime-main.f1fba834.js",
+    "static/js/2.398e21b6.chunk.js",
+    "static/css/main.db5d09f9.chunk.css",
+    "static/js/main.1af196a8.chunk.js"
   ]
 }
