@@ -2,6 +2,7 @@ import { ApolloProvider, InMemoryCache, ApolloClient, useQuery, gql} from '@apol
 import GetMissions from './Components/GetMissions/GetMissions';
 import GetTicket from './Components/GetTicket/GetTicket';
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+import GlobalLayout from './Components/Layout/GlobalLayout';
 
 
 const client = new ApolloClient({
@@ -14,11 +15,13 @@ const client = new ApolloClient({
 function App() {
   return (
     <Router >
-      <ApolloProvider client={client}>       
+      <ApolloProvider client={client}> 
+      <GlobalLayout>    
       <Routes>
         <Route path="/" element={<GetMissions/>} />
         <Route path="/ticket" element={<GetTicket />} />
       </Routes>
+      </GlobalLayout>  
     </ApolloProvider>
     </Router>
     

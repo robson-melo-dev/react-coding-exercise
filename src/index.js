@@ -8,9 +8,7 @@ import GlobalLayout from './Components/Layout/GlobalLayout';
 ReactDOM.render(
   
   <React.StrictMode>
-    <GlobalLayout>
         <App />
-    </GlobalLayout>
   </React.StrictMode>
   ,
   document.getElementById('root')

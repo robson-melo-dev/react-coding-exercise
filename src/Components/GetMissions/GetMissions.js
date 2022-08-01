@@ -6,6 +6,7 @@ import "./GetMissions.css";
 import Arrow from "./Arrow.js";
 import next_icon from "../../assets/vector/chevronCircle.svg";
 import logo from "../../assets/vector/wordmark.svg";
+import{Link} from "react-router-dom"
 
 function GetMissions() {
   let limit = 0;
@@ -130,7 +131,7 @@ function GetMissions() {
   }
 
   return (
-    <>
+    <div className="wrapper">
       <div className="header-wrapper">
         <header className="header">
           <img src={logo} alt="" className="logo" />
@@ -153,7 +154,7 @@ function GetMissions() {
             <h4 className="mission-header-cell">
               <span id="name" className="column-title" onClick={sortResult}>
                 MISSION NAME
-              </span>{" "}
+              </span>
               <Arrow direction={direction} visible={visibleArrow.name} />
             </h4>
             <h4 className="mission-header-cell">
@@ -182,7 +183,8 @@ function GetMissions() {
           {data.launchesPast.map((mission, index) => {
               if (index < page) {
                 return (
-                  <div className={"mission"} key={mission.id}>
+                  <Link to="/ticket">
+                  <div className={"mission"} key={mission.id}>                    
                     <div className="cell">{mission.mission_name}</div>
                     <div className="cell">{mission.rocket.rocket_name}</div>
                     <div className="cell center">
@@ -191,8 +193,9 @@ function GetMissions() {
                     <div className="cell center">{mission.launch_year}</div>
                     <div className=" center">
                       <img src={next_icon} alt="" className="next-icon" />
-                    </div>
+                    </div>                    
                   </div>
+                  </Link>
                 );
               }
              
@@ -217,7 +220,7 @@ function GetMissions() {
       </div>
 
       
-    </>
+    </div>
   );
 }
 
