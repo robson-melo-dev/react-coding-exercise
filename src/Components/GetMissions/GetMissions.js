@@ -94,12 +94,39 @@ function GetMissions() {
       setPage(limit);
     }
   }
-  function handleSearchWord(e) {
+
+  function handleSearchWord(e) { //event listener for the input word in the search field
     setSearchWord(e.target.value);
   }
 
   function searchMissions() {
     setFind(`, find: {mission_name: "${searchWord}"}`);
+  }
+
+  function renderLoadMore(){ // only renders the Load More section and buton if there is more than 6 results
+    if(data.launchesPast.length > 6){
+      return(
+        <div className={'load-more'}>
+            <p className="page">
+              {page} of {limit}
+            </p>
+            <button className="btn-primary" onClick={loadMore}>
+              Load More
+            </button>
+          </div>
+
+      )
+    }
+  }
+
+  function renderNoResults(){ // only renders this portin if there is no results in the search
+    if(data.launchesPast.length === 0){
+      return(
+        <div className="mission">
+          <h3>No results found for the search...</h3>
+        </div>
+      )
+    }
   }
 
   return (
@@ -153,7 +180,6 @@ function GetMissions() {
           </div>
 
           {data.launchesPast.map((mission, index) => {
-            if (limit > 0) {
               if (index < page) {
                 return (
                   <div className={"mission"} key={mission.id}>
@@ -169,23 +195,24 @@ function GetMissions() {
                   </div>
                 );
               }
-            } else {
-              return (
-                <div className={"mission"}>
-                  <h4>Nothing found...</h4>
-                </div>
-              );
-            }
-          })}
+             
+          })
+          }
 
-          <div className="load-more">
+
+          {renderNoResults()}
+
+          {renderLoadMore()}
+          {/* <div className={'load-more'}>
             <p className="page">
               {page} of {limit}
             </p>
             <button className="btn-primary" onClick={loadMore}>
               Load More
             </button>
-          </div>
+          </div> */}
+
+
         </div>
       </div>
 

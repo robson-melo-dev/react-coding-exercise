@@ -4,12 +4,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import GlobalLayout from './Components/Layout/GlobalLayout';
 
+
 ReactDOM.render(
+  
   <React.StrictMode>
     <GlobalLayout>
         <App />
     </GlobalLayout>
-  </React.StrictMode>,
+  </React.StrictMode>
+  ,
   document.getElementById('root')
 );
 
