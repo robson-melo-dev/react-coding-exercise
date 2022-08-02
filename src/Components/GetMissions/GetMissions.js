@@ -26,6 +26,7 @@ function GetMissions() {
    {
      launchesPast(${sort} ${find}) {
        mission_name
+       launch_date_utc
        rocket {
          rocket_name
          rocket_type
@@ -183,7 +184,7 @@ function GetMissions() {
           {data.launchesPast.map((mission, index) => {
               if (index < page) {
                 return (
-                  <Link to="/ticket">
+                  <Link to="/ticket" state={{ id: mission.launch_date_utc}}>
                   <div className={"mission"} key={mission.id}>                    
                     <div className="cell">{mission.mission_name}</div>
                     <div className="cell">{mission.rocket.rocket_name}</div>
