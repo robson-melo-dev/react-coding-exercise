@@ -97,3 +97,59 @@
     display: grid;
 }
 
+
+@media (max-width: 600px) {
+
+    .missions-table {
+        justify-content: flex-start;
+        width: 100%;
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-top: 5em;
+    }
+    .missions {
+        width: 100%
+    }
+    .mission-header{
+        height: 6em;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .mission-header{
+        grid-template-columns: 3.6fr 2.6fr 1.5fr 1.5fr
+    }
+
+    .thin_ruler{
+        width: 100%;
+        grid-template-columns: 3.6fr 2.6fr 1.5fr 1.5fr
+    }
+    .mission{
+        grid-template-columns: 3.6fr 2.6fr 1.5fr 1.5fr
+    }
+    
+  }
+
+  @media (min-width: 1024px) {
+    .missions-table{
+        font-size: large;
+     
+    }
+    
+  }
+
+  @media (min-width: 2000px) {
+    .missions-table{
+        font-size: x-large;
+     
+    }
+    
+  }
+  @media (min-width: 3000px) {
+    .missions-table{
+        font-size: xx-large;
+     
+    }
+    
+  }
+

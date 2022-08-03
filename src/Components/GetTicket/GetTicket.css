@@ -4,7 +4,7 @@
     height: 100vh;
     background-image: url('../../assets/vector/ticketPageBackground.svg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     overflow-x: hidden;
     font-weight: 300;
 }
@@ -76,3 +76,24 @@
     width: 55em;
     justify-content: flex-end;
 }
+
+.name, .year, .r_name, .r_type{
+    font-weight: 300;
+}
+
+@media (max-width: 1050px) {
+    .ticket{ 
+        transform: rotate(90deg); 
+        margin-top: 16em;
+    }
+
+    .wrapper-3{
+        flex-direction: column;
+        align-items: center;
+    }
+    .print{
+        justify-content: center;
+        margin-top: -41em;
+    }
+    
+  }
