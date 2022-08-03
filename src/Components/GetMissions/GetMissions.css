@@ -100,55 +100,57 @@
 
 @media (max-width: 600px) {
 
-    .missions-table {
+    .missions-table{
         justify-content: flex-start;
+        margin-left: 1em;
+        margin-top: 2em;
         width: 100%;
-      padding-left: 1em;
-      padding-right: 1em;
-      padding-top: 5em;
+        transform: scale(0.8);
     }
-    .missions {
-        width: 100%
+    .missions{
+        width: 100%;
     }
     .mission-header{
-        height: 6em;
+        transform: scale(0.8);
+        grid-template-columns: 3.6fr 2.6fr 1.5fr 1.3fr;
     }
   }
 
   @media (max-width: 400px) {
-    .mission-header{
-        grid-template-columns: 3.6fr 2.6fr 1.5fr 1.5fr
+    .missions-table{
+        margin-left: 1em;
+        margin-top: 2em;
+        width: 100%;
+        transform: scaleX(0.8);
     }
 
-    .thin_ruler{
-        width: 100%;
-        grid-template-columns: 3.6fr 2.6fr 1.5fr 1.5fr
-    }
-    .mission{
-        grid-template-columns: 3.6fr 2.6fr 1.5fr 1.5fr
-    }
     
   }
 
   @media (min-width: 1024px) {
     .missions-table{
-        font-size: large;
-     
+        font-size: large;     
     }
     
   }
 
   @media (min-width: 2000px) {
     .missions-table{
+        margin-left: 10em;
+        margin-top: 7em;
+        width: 80%;
         font-size: x-large;
-     
+        transform: scale(1.2);
     }
     
   }
   @media (min-width: 3000px) {
     .missions-table{
-        font-size: xx-large;
-     
+        font-size: xx-large;  
+        margin-left: 12em;
+        margin-top: 9em;
+        width: 80%;
+        transform: scale(1.3);   
     }
     
   }

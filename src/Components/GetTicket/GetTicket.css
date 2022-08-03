@@ -93,7 +93,40 @@
     }
     .print{
         justify-content: center;
-        margin-top: -41em;
+        margin-top: 14em;
     }
     
+  }
+
+  @media (min-width: 1900px){
+    .wrapper-3{
+        transform: scale(1.5);
+        margin-top: 5em;
+    }
+    .print{
+        transform: scale(1.5);
+        margin-top: 6em;
+    }
+  }
+
+  @media (min-width: 2500px){
+    .wrapper-3{
+        transform: scale(2);
+        margin-top: 10em;
+    }
+    .print{
+        transform: scale(2);
+        margin-top: 12em;
+    }
+  }
+
+  @media (min-width: 3800px){
+    .wrapper-3{
+        transform: scale(3);
+        margin-top: 20em;
+    }
+    .print{
+        transform: scale(3);
+        margin-top: 24em;
+    }
   }
