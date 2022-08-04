@@ -75,6 +75,8 @@ body {
     background-image: url('../../assets/vector/rocket.svg');
     background-repeat: no-repeat;
     background-position-x: 0.5em;
+    background-position-y: center;
+    background-size: em;
     height: 2em;
     border-color: transparent;
     border-radius: 2em;
@@ -110,6 +112,9 @@ body {
     .header-wrapper{
         font-size: large;     
     }
+    .search_input, .btn-primary{
+      font-size: large;
+    }
     
   }
 
@@ -117,11 +122,16 @@ body {
     .header-wrapper{
         font-size: x-large;     
     }
+    .search_input, .btn-primary{
+      font-size: x-large;
+    }
     
   }
   @media (min-width: 3000px) {
     .header-wrapper{
         font-size: xx-large;     
     }
-    
+    .search_input, .btn-primary{
+      font-size: xx-large;
+    }    
   }

@@ -136,22 +136,13 @@
 
   @media (min-width: 2000px) {
     .missions-table{
-        margin-left: 10em;
-        margin-top: 7em;
-        width: 80%;
         font-size: x-large;
-        transform: scale(1.2);
     }
     
   }
   @media (min-width: 3000px) {
     .missions-table{
         font-size: xx-large;  
-        margin-left: 12em;
-        margin-top: 9em;
-        width: 80%;
-        transform: scale(1.3);   
     }
-    
   }
 
