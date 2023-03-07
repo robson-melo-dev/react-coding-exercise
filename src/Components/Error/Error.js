@@ -1,5 +1,4 @@
 import React from 'react';
-// style
 
 
 const Error = ({ error }) => (

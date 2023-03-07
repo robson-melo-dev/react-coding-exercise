@@ -11,7 +11,7 @@ import{Link} from "react-router-dom"
 function GetMissions() {
   let limit = 0;
   const [page, setPage] = useState(6);
-  const [sort, setSort] = useState(', order: "desc", sort: "launch_year"'); // set default sorting to be the launch year
+  const [sort, setSort] = useState('sort: "rocket_name", order: "desc"'); // set default sorting to be the launch year
   const [direction, setDirection] = useState("asc");
   const [find, setFind] = useState('find: {mission_name: ""}');
   const [searchWord, setSearchWord] = useState("");
@@ -22,9 +22,9 @@ function GetMissions() {
     l_year: "",
   });
   //query to get all the mission information for the missions list display
-  const GET_MISSIONS = gql`
+  /* const GET_MISSIONS = gql`
    {
-     launchesPast(${sort} ${find}) {
+     launches(${sort} ${find}) {
        mission_name
        launch_date_utc
        rocket {
@@ -35,11 +35,23 @@ function GetMissions() {
        id
      }
    }
-   `;
+   `; */
+   const GET_MISSIONS = gql `query Launches($find: LaunchFind, $order: String, $sort: String) {
+    launches(find: $find, order: $order, sort: $sort) {
+      id
+      mission_name
+      rocket {
+        rocket_type
+        rocket_name
+      }
+      launch_date_utc
+    }
+  }`;
   const { data, loading, error } = useQuery(GET_MISSIONS);
   if (loading) return <Loader />;
   if (error) return <Error error={error} />;
-  limit = data.launchesPast.length;
+  limit = data.launches.length;
+  console.log(data)
 
   function loadMore(e) {
     e.preventDefault();
@@ -80,16 +92,7 @@ function GetMissions() {
         setDirection("desc");
         setSort(', order: "asc", sort: "rocket_type"');
       }
-    } else if (e.target.id === "l_year") {
-      setVisibleArrow({ name: "", r_name: "", r_type: "", l_year: "visible" });
-      if (direction === "desc") {
-        setDirection("asc");
-        setSort(', order: "desc", sort: "launch_year"');
-      } else {
-        setDirection("desc");
-        setSort(', order: "asc", sort: "launch_year"');
-      }
-    }
+    } 
     if (page < limit) {
       setPage(6);
     } else {
@@ -106,7 +109,7 @@ function GetMissions() {
   }
 
   function renderLoadMore(){ // only renders the Load More section and buton if there is more than 6 results
-    if(data.launchesPast.length > 6){
+    if(data.launches.length > 6){
       return(
         <div className={'load-more'}>
             <p className="page">
@@ -122,7 +125,7 @@ function GetMissions() {
   }
 
   function renderNoResults(){ // only renders this portin if there is no results in the search
-    if(data.launchesPast.length === 0){
+    if(data.launches.length === 0){
       return(
         <div className="mission">
           <h3>No results found for the search...</h3>
@@ -181,17 +184,18 @@ function GetMissions() {
             <div className="fat_ruler"></div>
           </div>
 
-          {data.launchesPast.map((mission, index) => {
+          {data.launches.map((mission, index) => {
+            let year = new Date(mission.launch_date_utc).getUTCFullYear()
               if (index < page) {
                 return (
-                  <Link to="/ticket" state={{ id: mission.launch_date_utc}}>
+                  <Link to="/ticket" state={{ id: mission.id}}>
                   <div className={"mission"} key={mission.id}>                    
                     <div className="cell">{mission.mission_name}</div>
                     <div className="cell">{mission.rocket.rocket_name}</div>
                     <div className="cell center">
                       {mission.rocket.rocket_type}
                     </div>
-                    <div className="cell center">{mission.launch_year}</div>
+                    <div className="cell center">{year}</div>
                     <div className=" center">
                       <img src={next_icon} alt="" className="next-icon" />
                     </div>                    

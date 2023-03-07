@@ -5,8 +5,8 @@ import "./Loader.css"
 
 const Loader = () => (
     <div className="loading">
-        <p>
-            <span role="img" aria-label="rocket" className="mission">
+        <p className="loading_msg">
+            <span role="img" aria-label="rocket" >
                 🚀
             </span>
             Loading data through wormholes...

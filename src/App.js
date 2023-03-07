@@ -6,7 +6,7 @@ import GlobalLayout from './Components/Layout/GlobalLayout';
 
 
 const client = new ApolloClient({
-  uri: `${process.env.REACT_APP_API_URL}`,
+  uri: `${process.env.REACT_APP_API_URL_NEW}`,
   cache: new InMemoryCache(),
 });
 

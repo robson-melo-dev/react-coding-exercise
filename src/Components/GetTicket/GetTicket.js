@@ -12,13 +12,13 @@ function GetTicket() {
   const { id } = location.state
   const GET_MISSION_DATA = gql`
    {
-     launchesPast(find: {launch_date_utc: "${id}"}) {
+     launch(id: "${id}") {
+      launch_date_utc
        mission_name
        rocket {
          rocket_name
          rocket_type
        }
-       launch_year
        id
      }
    }
@@ -31,6 +31,8 @@ function GetTicket() {
   function printTicket(){
     window.print()
   }
+
+  let year = new Date(data.launch.launch_date_utc).getUTCFullYear()
 
   return (
     <div className="ticket-wrapper">
@@ -46,21 +48,21 @@ function GetTicket() {
               <div className="year_wrapper">
                 <div className="launch_year">
                 <h6>LAUNCH YEAR</h6>
-                <h3 className="year">{data.launchesPast[0].launch_year}</h3>
+                <h3 className="year">{year}</h3>
                 </div>
               </div>
               <div className="mission_name">
                 <h4>MISSION NAME</h4>
-                <h1 className="name">{data.launchesPast[0].mission_name}</h1>
+                <h1 className="name">{data.launch.mission_name}</h1>
               </div>
               <div className="rocket_details">
                 <div className="rocket_name">
                   <h4>ROCKET NAME</h4>
-                  <h4 className="r_name">{data.launchesPast[0].rocket.rocket_name}</h4>
+                  <h4 className="r_name">{data.launch.rocket.rocket_name}</h4>
                 </div>
                 <div className="rocket_type">
                   <h4>ROCKET TYPE</h4>
-                  <h4 className="r_type">{data.launchesPast[0].rocket.rocket_type}</h4>
+                  <h4 className="r_type">{data.launch.rocket.rocket_type}</h4>
                 </div>
               </div>
             </div>
